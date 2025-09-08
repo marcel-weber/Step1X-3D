@@ -589,7 +589,7 @@ if __name__ == "__main__":
         # Sample points on sharp edges
         print("Sampling points on sharp edges of the mesh.")
         sharp_surface = sharp_edge_sampling(
-            args.input_mesh, 
+            f"{output_path}/watertight_mesh.obj", # fix bug
             num_views=args.num_sharp_surface_points,
             sharpness_threshold=math.radians(args.angle_threshold)
         )
